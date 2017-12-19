@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html layout:decorator="layout/layout" xmlns:th="http://www.thymeleaf.org">
+<body>
+<th:block layout:fragment="content">
+
+    <div class="row">
+        <div class="col-md-8 col-sm-8">
+            <div class="panel panel-default">
+
+                <div class="panel-heading">Organism List</div>
+                <div class="panel-body">
+                    <form method="post" class="form-group" action="/questions/questions{id}">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Questions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="question : ${questions}">
+                                <td th:text="${question.questionText()}">Table Element</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
+</body>
+</html>

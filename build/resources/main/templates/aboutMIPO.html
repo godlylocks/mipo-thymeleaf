@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html layout:decorator="layout/layout" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>About MIPO</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    <div class="container">
+          <div layout:fragment="content">
+             <div class="row">
+                <div class="column">
+
+                     <h1>About MIPO</h1>
+                         <p>
+                         Molecular Identification of Pathogenic Organisms (MIPO) is a web-based tool that allows the use of sequence <br />
+                         and feature information to distinguish organism species using crowd-sourcing data. Here, users can view <br />
+                         phenotype information of an organism of interest using a sequence and contribute to crowd-consensus <br />
+                         feature data.<br /><br /><br />
+                         </p>
+                </div>
+              </div>
+
+              <div class="row">
+                      <div class="column">
+                          <a href="/find" th:href="@{/find}">find</a>
+                      </div>
+
+                      <div class="column">
+                          <a href="/contribute" th:href="@{/contribute}">contribute</a>
+                      </div>
+                </div>
+
+          </div>
+    </div>
+
+</body>
+</html>
